@@ -1,0 +1,5 @@
+<!-- <toDo-add-todo (onAddTodo)="addTodo($event)"></toDo-add-todo> -->
+<toDo-todo-item
+  *ngFor="let todo of todos"
+  [todo]="todo"
+></toDo-todo-item>
