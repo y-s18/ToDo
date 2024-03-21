@@ -1,5 +1,7 @@
 <div [ngClass]="{done: todo.done}" class="todo" (dblclick)="onToggle(todo)">
     <!-- <h3> -->
-      <h3>{{ todo.text }} <fa-icon (click)="onDelete(todo)" [ngStyle]="{'color': 'red'}" [icon]="faTimes"></fa-icon></h3>
-      <p>{{ todo.day }}</p>
+      <h3 *ngIf="todo.done == true"><s>{{ todo.text }}</s><fa-icon (click)="onDelete(todo)" [ngStyle]="{'color': 'red'}" [icon]="faTimes"></fa-icon></h3>
+      <p *ngIf="todo.done == true"><s>{{ todo.day }}</s></p>
+      <h3 *ngIf="todo.done == false">{{ todo.text }}<fa-icon (click)="onDelete(todo)" [ngStyle]="{'color': 'red'}" [icon]="faTimes"></fa-icon></h3>
+      <p *ngIf="todo.done == false">{{ todo.day }}</p>
   </div>
