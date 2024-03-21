@@ -11,4 +11,7 @@ import { ButtonComponent } from "../button/button.component";
 export class HeaderComponent {
   title: string = 'TODO';
 
+  toggleAddTask() {
+    console.log('toggle');
+  }
 }
