@@ -3,13 +3,14 @@ import { TodoService } from '../../services/todo.service';
 import { ToDo } from '../../ToDo';
 import { TodoItemComponent } from '../todo-item/todo-item.component';
 import { CommonModule } from '@angular/common';
+import { AddTodoComponent } from "../add-todo/add-todo.component";
 
 @Component({
-  selector: 'toDo-todos',
-  standalone: true,
-  imports: [CommonModule, TodoItemComponent],
-  templateUrl: './todos.component.html',
-  styleUrl: './todos.component.scss',
+    selector: 'toDo-todos',
+    standalone: true,
+    templateUrl: './todos.component.html',
+    styleUrl: './todos.component.scss',
+    imports: [CommonModule, TodoItemComponent, AddTodoComponent]
 })
 export class TodosComponent {
   todos: ToDo[] = [];
