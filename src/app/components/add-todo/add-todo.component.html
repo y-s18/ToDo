@@ -1,11 +1,11 @@
-<form class="add-form">
+<form class="add-form" (ngSubmit)="onSubmit()">
   <div class="form-control">
     <label for="text">New To-Do</label>
-    <input type="text" name="text" id="text" placeholder="Add To-Do"/>
+    <input type="text" name="text" [(ngModel)]="text" id="text" placeholder="Add To-Do"/>
   </div>
   <div class="form-control">
     <label for="day">Day & Time</label>
-    <input type="text" name="day" id="day" placeholder="Add Day & Time"/>
+    <input type="text" name="day" [(ngModel)]="day" id="day" placeholder="Add Day & Time"/>
   </div>
   <input type="submit" value="Save To-Do" class="btn btn-block" />
 </form>

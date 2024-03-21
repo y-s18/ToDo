@@ -33,4 +33,8 @@ export class TodosComponent {
     todo.done = !todo.done;
     this.todoService.updateTodoStatus(todo).subscribe();
   }
+
+  addTodo(todo: ToDo) {
+    this.todoService.addTodo(todo).subscribe((todo) => (this.todos.push(todo)));
+  }
 }
