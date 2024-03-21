@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { TodoService } from '../../services/todo.service';
 import { ToDo } from '../../ToDo';
 import { TodoItemComponent } from '../todo-item/todo-item.component';
 import { CommonModule } from '@angular/common';
-import { TODOS } from '../../mock-todos';
+
 
 @Component({
   selector: 'toDo-todos',
@@ -12,6 +13,11 @@ import { TODOS } from '../../mock-todos';
   styleUrl: './todos.component.scss'
 })
 export class TodosComponent {
-  todos: ToDo[] = TODOS;//[];
+  todos: ToDo[] = [];
 
+  constructor(private todoService: TodoService) {}
+
+  ngOnInit(): void {
+    this.todoService.getTodos().subscribe((todos) => (this.todos = todos));
+  }
 }
