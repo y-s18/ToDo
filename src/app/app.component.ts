@@ -6,6 +6,7 @@ import { TodosComponent } from './components/todos/todos.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { TodoService } from './services/todo.service';
+import { UiService } from './services/ui.service';
 
 @Component({
   selector: 'toDo-root',
@@ -20,7 +21,7 @@ import { TodoService } from './services/todo.service';
     FontAwesomeModule,
     HttpClientModule,
   ],
-  providers: [TodoService]
+  providers: [TodoService, UiService]
 })
 export class AppComponent {
   title = 'toDo';

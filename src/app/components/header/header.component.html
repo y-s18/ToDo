@@ -1,4 +1,8 @@
 <header>
   <h1>{{ title }}</h1>
-  <toDo-button text="Add" color="green" (btnClick)="toggleAddTask()"></toDo-button>
+  <toDo-button
+  text="{{showAddTodo ? 'Close' : 'Add'}}"
+  color="{{showAddTodo ? 'red' : 'green'}}"
+  (btnClick)="toggleAddTask()"
+  ></toDo-button>
 </header>

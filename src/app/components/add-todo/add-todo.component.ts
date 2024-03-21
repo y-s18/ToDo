@@ -1,6 +1,8 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { UiService} from '../../services/ui.service';
+import { Subscription } from 'rxjs';
 import { ToDo } from '../../ToDo';
 
 @Component({
@@ -15,6 +17,15 @@ export class AddTodoComponent {
   text!: string;
   day!: string;
   done: boolean = false;
+  showAddTodo!: boolean;
+  subscription!: Subscription;
+
+
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService
+    .onToggle()
+    .subscribe((value) => (this.showAddTodo = value));
+  }
 
   onSubmit() {
     if(!this.text) {
