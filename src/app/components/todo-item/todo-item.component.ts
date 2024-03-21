@@ -14,9 +14,14 @@ import { CommonModule} from '@angular/common';
 export class TodoItemComponent {
   @Input() todo!: ToDo;
   faTimes = faTimes;
-  @Output() onToggleDone: EventEmitter<ToDo> = new EventEmitter
+  @Output() onToggleDone: EventEmitter<ToDo> = new EventEmitter;
+  @Output() onDeleteTodo: EventEmitter<ToDo> = new EventEmitter;
 
   onToggle(todo: ToDo){
     this.onToggleDone.emit(todo);
+  }
+
+  onDelete(todo: ToDo) {
+    this.onDeleteTodo.emit(todo);
   }
 }

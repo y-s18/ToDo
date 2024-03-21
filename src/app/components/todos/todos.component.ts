@@ -4,13 +4,12 @@ import { ToDo } from '../../ToDo';
 import { TodoItemComponent } from '../todo-item/todo-item.component';
 import { CommonModule } from '@angular/common';
 
-
 @Component({
   selector: 'toDo-todos',
   standalone: true,
   imports: [CommonModule, TodoItemComponent],
   templateUrl: './todos.component.html',
-  styleUrl: './todos.component.scss'
+  styleUrl: './todos.component.scss',
 })
 export class TodosComponent {
   todos: ToDo[] = [];
@@ -19,5 +18,18 @@ export class TodosComponent {
 
   ngOnInit(): void {
     this.todoService.getTodos().subscribe((todos) => (this.todos = todos));
+  }
+
+  deleteTodo(todo: ToDo) {
+    this.todoService
+    .deleteTodo(todo)
+    .subscribe(
+      () => (this.todos = this.todos.filter((t) => t.id !== todo.id))
+      );
+    }
+
+  toggleDone(todo: ToDo) {
+    todo.done = !todo.done;
+    this.todoService.updateTodoStatus(todo).subscribe();
   }
 }

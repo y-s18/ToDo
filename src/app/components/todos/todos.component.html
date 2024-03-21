@@ -2,4 +2,6 @@
 <toDo-todo-item
   *ngFor="let todo of todos"
   [todo]="todo"
+  (onDeleteTodo)="deleteTodo(todo)"
+  (onToggleDone)="toggleDone(todo)"
 ></toDo-todo-item>
