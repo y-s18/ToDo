@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent {
   title: string = 'TODO';
-  showAddTodo: boolean = false;
+  showAddTodo: boolean = true;
   subscription!: Subscription;
 
   constructor(private uiService: UiService) {

@@ -1,11 +1,12 @@
-<form *ngIf="showAddTodo" class="add-form" (ngSubmit)="onSubmit()">
+<!-- <form *ngIf="showAddTodo" class="add-form" (ngSubmit)="onSubmit()"> -->
+<form class="add-form" (ngSubmit)="onSubmit()">
   <div class="form-control">
-    <label for="text">New To-Do</label>
+    <label for="text">To-Do</label>
     <input type="text" name="text" [(ngModel)]="text" id="text" placeholder="Add To-Do"/>
   </div>
   <div class="form-control">
     <label for="day">Day & Time</label>
     <input type="text" name="day" [(ngModel)]="day" id="day" placeholder="Add Day & Time"/>
   </div>
-  <input type="submit" value="Save To-Do" class="btn btn-block" />
+  <input type="submit" value="Add To-Do" class="btn btn-block" />
 </form>
