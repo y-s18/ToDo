@@ -12,7 +12,6 @@ A simple ToDo application. This project was built with the purpose of learning A
 * Angular 17.1.2
 * NodeJS 20.10.0
 * JSON-Server 1.0.0-alpha.23
-* VS Code
 
 ## Steps to install
 
