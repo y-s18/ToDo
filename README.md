@@ -1,27 +1,38 @@
 # ToDo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
+A simple ToDo application. This project was built with the purpose of learning Angular based on [this](https://github.com/bradtraversy/angular-crash-2021) tutorial.
 
-## Development server
+<p align="center">
+  <img src="https://github.com/y-s18/ToDo/blob/0304e7948efce6672424b26a170e520200244d29/Images/ToDo.png" width=50% height=50%>
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Requirements
 
-## Code scaffolding
+* TypeScript 5.3.3
+* Angular 17.1.2
+* NodeJS 20.10.0
+* JSON-Server 1.0.0-alpha.23
+* VS Code
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Steps to install
 
-## Build
+**1. Clone the application**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+git  clone https://github.com/y-s18/ToDo.git
+```
 
-## Running unit tests
+**2. Install NodeJS and Angular**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+You can download NodeJS from [here](https://nodejs.org/en/download). Type `node -v` to check the version.
 
-## Running end-to-end tests
+To install angular, run the following command.
+```bash
+npm install -g @angular/cli
+```
+You can specify the version by typing `@angular/cli@desired.version.here`. Run `ng v` to check the installed version.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+**3. Run the application**
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
++ Run `npm run server` to start the JSON-Server ([http://localhost:5000](http://localhost:5000/)).
++ Run `ng serve -o` to start the application ([http://localhost:4200](http://localhost:4200/)).
